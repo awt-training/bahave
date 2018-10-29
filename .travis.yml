@@ -1,0 +1,29 @@
+language: python
+python:
+  - "2.7"
+
+branches:
+  only: develop
+
+# command to install dependencies
+install:
+  - pip install behave
+  - pip install allure-behave
+# command to run tests
+script:
+  - sonar-scanner
+  - behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder%
+
+addons:
+  sonarcloud:
+    organization: "awt-training"
+    token:
+      secure: $SONAR_TOKEN
+    github_token:
+      secure: $GITHUB_TOKEN
+    branches:
+    - develop
+
+notifications:
+ email: true
+   - Bruno.Barrios@jalasoft.com
