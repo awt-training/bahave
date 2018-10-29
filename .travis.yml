@@ -1,0 +1,12 @@
+language: python
+python:
+  - "2.7"
+
+# command to install dependencies
+install:
+  - pip install behave
+  - pip install allure-behave
+#  - pip install -r requirements.txt
+# command to run tests
+script:
+  - behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder%
