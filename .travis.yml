@@ -2,7 +2,6 @@ language: python
 python:
   - "2.7"
 
-
 # command to install dependencies
 install:
   - pip install behave
@@ -24,3 +23,4 @@ addons:
 notifications:
  email: true
    - Bruno.Barrios@jalasoft.com
+
