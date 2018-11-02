@@ -7,6 +7,7 @@ python:
 install:
   - pip install behave
   - pip install allure-behave
+
 # command to run tests
 script:
   - sonar-scanner -Dsonar.login=$SONAR_TOKEN
