@@ -2,8 +2,8 @@ language: python
 python:
   - "2.7"
 
-branches:
-  only: develop
+#branches:
+#  only: develop
 
 # command to install dependencies
 install:
@@ -21,9 +21,9 @@ addons:
       secure: $SONAR_TOKEN
     github_token:
       secure: $GITHUB_TOKEN
-    branches:
-    - develop
 
 notifications:
  email: true
    - Bruno.Barrios@jalasoft.com
+
+
