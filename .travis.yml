@@ -22,8 +22,7 @@ addons:
     github_token:
       secure: $GITHUB_TOKEN
 
+
 notifications:
  email: true
    - Bruno.Barrios@jalasoft.com
-
-
