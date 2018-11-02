@@ -9,8 +9,8 @@ install:
   - pip install allure-behave
 # command to run tests
 script:
-  -sonar-scanner
-  -behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder%
+  - sonar-scanner
+  - behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder%
 
 addons:
   sonarcloud:
