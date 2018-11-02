@@ -24,8 +24,7 @@ addons:
     branches:
       -develop
 
+
 notifications:
  email: true
    - Bruno.Barrios@jalasoft.com
-
-
