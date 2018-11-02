@@ -22,7 +22,7 @@ addons:
     github_token:
       secure: $GITHUB_TOKEN
     branches:
-      -develop
+      -travis
 
 
 notifications:
