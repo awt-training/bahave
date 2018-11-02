@@ -2,8 +2,6 @@ language: python
 python:
   - "2.7"
 
-branches:
-  only: develop
 
 # command to install dependencies
 install:
@@ -11,16 +9,15 @@ install:
   - pip install allure-behave
 # command to run tests
 script:
-  - sonar-scanner
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN
   - behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder%
 
 addons:
   sonarcloud:
-    organization: "awt-training"
+    organization: "awt-01-training"
     token:
-      secure: $GITHUB_TOKEN
-    branches:
-      -develop
+      secure: $SONAR_TOKEN
+
 
 
 notifications:
