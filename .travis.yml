@@ -9,7 +9,7 @@ install:
   - pip install allure-behave
 # command to run tests
 script:
-  -sonar-scanner --Dsonar.projectKey=awt  -Dsonar.organization=awt-training -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+  -sonar-scanner
   -behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder%
 
 addons:
