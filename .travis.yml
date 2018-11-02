@@ -5,12 +5,10 @@ python:
 
 # command to install dependencies
 install:
-  - gem install travis
   - pip install behave
   - pip install allure-behave
 # command to run tests
 script:
-  - travis encrypt SONAR_TOKEN_ENC=$SONAR_TOKEN --add
   - sonar-scanner -X
   - behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder%
 
@@ -18,7 +16,7 @@ addons:
   sonarcloud:
     organization: "awt-01-training"
     token:
-      secure: $SONAR_TOKEN_ENC
+      secure: $SONAR_TOKEN
 
 
 
