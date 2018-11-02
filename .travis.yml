@@ -18,8 +18,6 @@ addons:
   sonarcloud:
     organization: "awt-training"
     token:
-      secure: $SONAR_TOKEN
-    github_token:
       secure: $GITHUB_TOKEN
     branches:
       -develop
